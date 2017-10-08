@@ -1,6 +1,6 @@
 {
   "name": "bump-file",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Bump JSON files (e.g. package.json and friends)",
   "keywords": [
     "bump",
