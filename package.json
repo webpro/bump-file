@@ -1,6 +1,6 @@
 {
   "name": "bump-file",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Bump JSON files (e.g. package.json and friends)",
   "keywords": [
     "bump",
@@ -44,6 +44,6 @@
     "tape": "4.8.0"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   }
 }
