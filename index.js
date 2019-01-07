@@ -1,6 +1,5 @@
 'use strict';
 const fs = require('fs');
-const path = require('path');
 const semver = require('semver');
 const detectIndent = require('detect-indent');
 
@@ -12,7 +11,7 @@ class BumpError extends Error {
 }
 
 const readFile = (filePath, cb) => {
-  fs.readFile(filePath, 'utf8', function(err, data) {
+  fs.readFile(filePath, 'utf8', (err, data) => {
     if (err) return cb(err);
     let json = null;
     let indent;
@@ -46,7 +45,7 @@ const incrementFile = (filePath, options) => {
       const incVersion = incrementVersion(get(json), increment, preId);
       if (!incVersion) return reject(new BumpError(`Invalid increment value: ${increment}`));
       set(json, incVersion);
-      fs.writeFile(filePath, new Buffer(JSON.stringify(json, null, indent) + '\n'), err => {
+      fs.writeFile(filePath, Buffer.from(JSON.stringify(json, null, indent) + '\n'), err => {
         if (err) return reject(new BumpError(err.message));
         resolve(json);
       });

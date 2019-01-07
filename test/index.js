@@ -1,9 +1,8 @@
 const test = require('tape');
-const assert = require('assert');
 const fs = require('fs');
 const path = require('path');
 const bump = require('../index');
-const inc = require('../index').inc;
+const { inc } = require('../index');
 
 const writeFile = fs.writeFile;
 
@@ -92,7 +91,7 @@ test('invalid bump', t => {
 test('get/set', t => {
   const get = o => o.version;
   const set = (o, v) => (o.version = v);
-  bump(fixturePaths[0], { get: get, set: set }).then(result => {
+  bump(fixturePaths[0], { get, set }).then(result => {
     t.equal(result.version, '1.0.1');
     t.end();
   });
