@@ -1,9 +1,9 @@
-# file-bump
+# bump-file
 
 ## Installation
 
 ```
-npm install file-bump
+npm install bump-file
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ bump(file, {
 
 ### CLI
 
-You can install this globally (`npm install -g file-bump`), and use from CLI:
+You can install this globally (`npm install -g bump-file`), and use from CLI:
 
 ```
 bump file [increment] [preId]
