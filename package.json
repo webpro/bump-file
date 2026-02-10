@@ -37,7 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "detect-indent": "5.0.0",
-    "semver": "5.4.1"
+    "semver": "5.7.2"
   },
   "devDependencies": {
     "prettier": "1.7.3",
